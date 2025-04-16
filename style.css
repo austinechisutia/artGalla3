@@ -27,6 +27,10 @@ html{
     background-color: var(--background-color);
     color: var(--text-color);
 }
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
 
 .first-color{
     position: absolute;
@@ -36,7 +40,18 @@ html{
     height: 300px;
     background-color: var(--secondary-color);
     border-radius: 50%;
-    filter: blur(150px);
+    filter: blur(200px);
+}
+
+.second-color{
+    position: absolute;
+    left: -20%;
+    top: 150px;
+    width: 300px;
+    height: 300px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    filter: blur(200px);
 }
 
 @media (max-width: 768px){
@@ -52,6 +67,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    
 }
 #menu-icon {
     display: none;
@@ -99,3 +115,274 @@ nav{
     border-radius: 20px;
     font-weight: 500;
 }
+.clone:hover{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transform: scale(1.1);
+}
+.landing-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+}
+.landing-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 700px;
+}
+.landing-left h1{
+    font-size: 3rem;
+}
+.links{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+}
+.btn {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    color: var(--background-color);
+    box-shadow: 0 0 5px 2px var(--primary-color); /* glowy outline */
+    backdrop-filter: blur(1px); /* subtle blur effect */
+  }
+  
+.btn:hover{
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+.btn-outline{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.about{    
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 0 5px 1px var(--secondary-color); /* glowy outline */
+    backdrop-filter: blur(1px); /* subtle blur effect */
+}  
+
+.numbers{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.num{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.count{
+    font-weight: 700;
+}
+.landing-right{
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    padding: 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent glass */
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.3); /* 3D depth */
+    backdrop-filter: blur(10px); /* glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* frosty border */
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Optional hover effect for a 3D lift */
+  .image-container:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .image-container img {
+    width: 280px;       /* or 100% if container has a fixed size */
+    height: 350px;      /* force same height */
+    object-fit: cover;  /* crop to fill without stretching */
+    border-radius: 15px;
+    display: block;
+  }
+  .images{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  .main-image {
+    position: absolute;
+    top: -40px; /* adjust how high above */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* place it above the other images */
+  }
+  .text{
+    text-align: center;
+    margin-top: 20px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Hover left → move middle to right */
+.left-image:hover ~ .main-image {
+    transform: translateX(-100%);
+  }
+  
+  /* Hover right → move middle to left */
+  .right-image:hover ~ .main-image {
+    transform: translateX(10%);
+  }
+  @media (max-width: 1000px){
+    .landing-text{
+        display: flex;
+        flex-direction: column;
+    }
+    .landing-left{
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+  }
+
+  @media (min-width: 1000px) and (max-width: 1240px){
+    .landing-left h1{
+        font-size: 2.5rem;
+    }
+    .image-container {
+        width: 250px;
+        height: 400px;
+    }
+    .image-container img {
+        width: 240px;       /* or 100% if container has a fixed size */
+        height: 300px;      /* force same height */
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 10px;
+    }
+    .text h1{
+        font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 768px){
+    .landing-left h1{
+        font-size: 2rem;
+    }
+    .image-container {
+        width: 200px;
+        height: 350px;
+    }
+    .image-container img {
+        width: 180px;       /* or 100% if container has a fixed size */
+        height: 250px;      /* force same height */
+    }
+    .text h1{
+        font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 500px){
+    .landing-left h1{
+        font-size: 1.5rem;
+    }
+    .image-container {
+        width: 150px;
+        height: 300px;
+    }
+    .image-container img {
+        width: 140px;       /* or 100% if container has a fixed size */
+        height: 200px;      /* force same height */
+    }
+    .text h1{
+        font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 400px){
+    .landing-left h1{
+        font-size: 1.2rem;
+    }
+    .image-container {
+        width: 120px;
+        height: 250px;
+    }
+    .image-container img {
+        width: 100px;       /* or 100% if container has a fixed size */
+        height: 150px;      /* force same height */
+    }
+    .text h1{
+        font-size: 0.8rem;
+    }
+    .clone{
+        padding: 5px 10px;
+    }
+    .btn{
+        padding: 5px 10px;
+    }
+    .about{
+        padding: 5px 10px;
+    }
+  }
+  
+
+  .glowy-line-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .glowy-line {
+    width: 100%;
+    fill: none;
+    stroke: var(--primary-color);
+    stroke-width: 3;
+    filter: drop-shadow(0 0 5px var(--primary-color));
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  .stars use {
+    fill: white;
+    stroke: var(--primary-color);
+    stroke-width: 0.8;
+    transform: scale(2) rotate(45deg);
+    transform-origin: center;
+    filter: drop-shadow(0 0 5px var(--primary-color));
+    animation: twinkle 2s infinite alternate;
+  }
+  
+  @keyframes twinkle {
+    from {
+      opacity: 1;
+      transform: scale(2) rotate(45deg);
+    }
+    to {
+      opacity: 0.5;
+      transform: scale(1.5) rotate(360deg);
+    }
+  }
+  
+

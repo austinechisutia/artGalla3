@@ -16,7 +16,6 @@
         <div class="landing">
             <nav>
                 <div class="logo">art:Galla</div>
-                <i class='bx bx-menu' id="menu-icon"></i>
                 <ul class="nav-links">
                     <li><a href="#home" class="active">home</a></li>
                     <li><a href="#about">about</a></li>
@@ -26,13 +25,18 @@
                 <div class="clone">
                     buy now
                 </div>
+                <i class='bx bx-menu' id="menu-icon"></i>
+
             </nav>
 
             <div class="landing-text">
                 <div class="landing-left">
                     <h1>Buy and Sell Fractional Art, African Collections</h1>
                 <p>Art is the most beautiful of all lies.</p>
-                <a href="#about" class="btn">Add ArtWork</a>
+                <div class="links">
+                    <a href="#about" class="btn">add artWork</a>
+                    <a href="#about" class="about">about</a>
+                </div>
                 <div class="numbers">
                     <div class="num">
                         <p class="count">1231k</h1>
@@ -51,9 +55,53 @@
                 </div>
                 </div>
                 <div class="landing-right">
-                    <img src="images/landing.png" alt="landing image">
+                    <div class="images">
+                        <div class="image-container right-image">
+                            <img src="images/img1.jpeg" alt="">
+                            <div class="text">
+                                <h1>Blowin' Vibes</h1>
+                                <p>$ 356,7589.99</p>
+                            </div>
+                        </div>
+
+                        <div class="image-container left-image">
+                            <img src="images/img2.jpeg" alt="">
+                            <div class="text">
+                                <h1>Living Art</h1>
+                                <p>$ 456,799.99</p>
+                            </div>
+                        </div>
+
+                        <div class="image-container main-image">
+                            <img src="images/img3.jpeg" alt="">
+                            <div class="text">
+                                <h1>Bleeding Ghost</h1>
+                                <p>$ 4756,765.99</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>    
+            </div> 
+            
+            <div class="glowy-line-wrapper">
+                <svg viewBox="0 0 800 200" class="glowy-line">
+                  <path d="M 0 100 Q 200 0, 400 100 T 800 100" />
+                  
+                  <!-- Stars along the path -->
+                  <g class="stars">
+                    <use href="#star" x="100" y="60" />
+                    <use href="#star" x="300" y="140" />
+                    <use href="#star" x="500" y="60" />
+                    <use href="#star" x="700" y="140" />
+                  </g>
+              
+                  <!-- Define the star -->
+                  <defs>
+                    <polygon id="star" points="5,0 10,5 5,10 0,5" />
+                  </defs>
+                </svg>
+              </div>
+              
         </div>
     </div>
 </body>
