@@ -45,13 +45,26 @@ a{
 
 .second-color{
     position: absolute;
-    left: -20%;
+    left: -10%;
     top: 150px;
     width: 300px;
     height: 300px;
     background-color: var(--primary-color);
     border-radius: 50%;
     filter: blur(200px);
+    z-index: 999;
+}
+.second-color1{
+    position: absolute;
+    right: -10%;
+    top: 150px;
+    width: 300px;
+    height: 300px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    filter: blur(200px);
+    z-index: 999;
+
 }
 
 @media (max-width: 768px){
@@ -384,5 +397,83 @@ nav{
       transform: scale(1.5) rotate(360deg);
     }
   }
+  
+  .complements {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .glassy-btn {
+    background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    border-radius: 50%; /* Circular buttons */
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Slight border for depth */
+    color: white;
+    font-size: 1.5rem; /* Adjust size for icons */
+    backdrop-filter: blur(10px); /* Glassy blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .art-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    
+  }
+  .content-page{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .artartists{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 200px;
+  }
+  .arts-titl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .artartists h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    max-width: 500px;
+    text-align: center;
+  }
+  .arts-titl h4{
+    color: var(--secondary-color);
+  }
+  .arts-titl p{
+    max-width: 800px;
+  }
+
+
+  .js-second-color,
+.js-second-color1 {
+  position: fixed;  /* Prevent scroll offset issue */
+  pointer-events: none; 
+  /* No interaction with the circles */
+}
+
+
   
 
