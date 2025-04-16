@@ -15,3 +15,5 @@
     circle.style.top = `${y}vh`;
     wrapper1.appendChild(circle);
   }
+
+  

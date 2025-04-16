@@ -277,6 +277,11 @@ nav{
         margin-bottom: 20px;
         text-align: center;
     }
+    .first-color{
+        width: 200px;
+        height: 200px;
+        top: -50px;
+    }
   }
 
   @media (min-width: 1000px) and (max-width: 1240px){
@@ -315,6 +320,12 @@ nav{
     }
     .text h1{
         font-size: 1.2rem;
+    }
+    .first-color, .second-color, .second-color1{
+        width: 200px;
+        height: 200px;
+        top: -50px;
+
     }
   }
 
@@ -358,6 +369,12 @@ nav{
     }
     .about{
         padding: 5px 10px;
+    }
+
+    .first-color, .second-color, .second-color1{
+        width: 150px;
+        height: 150px;
+
     }
   }
   
@@ -437,6 +454,8 @@ nav{
     gap: 20px;
     padding: 20px;
     text-align: center;
+    align-items: center;
+    justify-items: center;
   }
 
   .artartists{
@@ -473,6 +492,132 @@ nav{
   pointer-events: none; 
   /* No interaction with the circles */
 }
+
+
+.image-container1 {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    padding: 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent glass */
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.3); /* 3D depth */
+    backdrop-filter: blur(10px); /* glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* frosty border */
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Optional hover effect for a 3D lift */
+  .image-container1:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .image-container1 img {
+    width: 280px;       /* or 100% if container has a fixed size */
+    height: 350px;      /* force same height */
+    object-fit: cover;  /* crop to fill without stretching */
+    border-radius: 15px;
+    display: block;
+  }
+  .images1{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  .main-image1 {
+    position: absolute;
+    top: -40px; /* adjust how high above */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* place it above the other images */
+  }
+  .text1{
+    text-align: center;
+    margin-top: 20px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer {
+    width: 100%;
+    padding: 30px 20px;
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-color);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--secondary-color);
+  }
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+  }
+
+  
+  @media (max-width: 600px) {
+    .footer {
+      padding: 20px 10px;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .footer-links a {
+      font-size: 0.9rem;
+    }
+  
+    .footer-content {
+      gap: 15px;
+    }
+  }
+
+
 
 
   
