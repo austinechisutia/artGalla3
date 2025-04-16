@@ -616,6 +616,9 @@ nav{
       gap: 15px;
     }
   }
+  .image-container1 h1{
+    font-size: 1.3rem;
+  }
 
 
 
